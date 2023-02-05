@@ -1,3 +1,6 @@
-body {
-  padding: 1em;
-}
+/* Global */
+@import 'fonts.css';
+@import 'default.css';
+@import 'variables.css';
+
+/* Blocks */
