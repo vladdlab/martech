@@ -37,7 +37,7 @@
     </section>
 
     <dialog id="modal" class="modal">
-      <button class="modal__close-btn" onclick="modal.close()"></button>
+      <button class="modal__close-btn" onclick="modal.close()" aria-label="Close"></button>
       <form class="signup-form" novalidate>
         <p class="signup-form__lead lead">To register, enter the mail to which our news is sent and set your password</p>
 
@@ -81,7 +81,7 @@
     function redirectToMain() {
       window.location.replace(`https://www.dating.com/people/?token=${localStorage.getItem('x-token')}`)
     }
-    if (localStorage.getItem('x-token')) redirectToMain();
+    // if (localStorage.getItem('x-token')) redirectToMain();
   </script>
   <script src="scripts/index.js"></script>
 </body>
