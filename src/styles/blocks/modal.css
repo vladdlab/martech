@@ -1,0 +1,58 @@
+.modal {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+  position: fixed;
+  inset: 0;
+  width: min(90vw, 1270px);
+  height: min(80vh, 652px);
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border: none;
+
+  transition: opacity .5s ease;
+}
+
+.modal::backdrop {
+  transition: backdrop-filter .5s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(7.5px);
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+html:has(.modal[open]) {
+  overflow: hidden;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 21px;
+  right: 10px;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  border: none;
+  background: url(../../images/close.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+@media (width > 550px) {
+  .modal {
+    border-radius: 50px;
+  }
+
+  .modal__close-btn {
+    top: 45px;
+    right: 45px;
+    width: 28px;
+    height: 28px;
+  }
+}

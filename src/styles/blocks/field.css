@@ -1,0 +1,36 @@
+.field {
+  position: relative;
+}
+.field input {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--black);
+  padding: 5px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--grey);
+  margin-bottom: 12px;
+}
+
+.field input:focus {
+  outline: none;
+}
+.field input::placeholder {
+  color: var(--grey);
+}
+
+.field--invalid input {
+  border-bottom: 1px solid var(--error-red);
+}
+.field--invalid::after {
+  content: '';
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  background: url(../../images/error.svg) 50% 50% no-repeat;
+}

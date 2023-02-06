@@ -1,6 +1,14 @@
 /* Global */
-@import 'fonts.css';
 @import 'default.css';
 @import 'variables.css';
 
 /* Blocks */
+@import './blocks/header.css';
+@import './blocks/page.css';
+@import './blocks/list.css';
+@import './blocks/button.css';
+@import './blocks/modal.css';
+@import './blocks/signup-form.css';
+@import './blocks/field.css';
+@import './blocks/lead.css';
+@import './blocks/invalid-feedback.css';

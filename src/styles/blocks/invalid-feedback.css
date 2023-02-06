@@ -1,0 +1,7 @@
+.invalid-feedback {
+  color: var(--error-text-red);
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
+}

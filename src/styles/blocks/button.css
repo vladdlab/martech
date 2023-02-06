@@ -1,0 +1,31 @@
+.button {
+  padding: 15.0104px 30.6211px;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+
+  background: var(--base-btn-gradient);
+  border-radius: 10px;
+
+  font-weight: 800;
+  line-height: 31px;
+  font-size: 13.8095px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  opacity: 0.7;
+}
+
+@media (width >= 1200px) {
+  .button {
+    padding: 25px 51px;
+    font-size: 23px;
+    line-height: 31px;
+  }
+}
