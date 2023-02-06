@@ -1,12 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
 <head>
+  <title>How to Participate</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-  main
+<body class="page__body">
+  <main class="page__main">
+
+    <section class="page__section">
+      <picture class="page__img">
+        <source media="(min-width: 601px)" width="1094" height="1035" srcset="images/group.webp" type="image/webp">
+        <source media="(max-width: 600px)" width="580" height="550" srcset="images/group-mobile.webp" type="image/webp">
+
+        <source media="(min-width: 601px)" width="1094" height="1035" srcset="images/group.png" type="image/png">
+        <source media="(max-width: 600px)" width="580" height="550" srcset="images/group-mobile.png" type="image/png">
+
+        <img src="images/group.png" width="1094" height="1035" alt="Group of people" class="page__img" />
+      </picture>
+    </section>
+
+    <section class="page__section">
+      <h1 class="header page__header">How to<br> Participate</h1>
+      <ol class="steps">
+        <li>Subscribe to our News</li>
+        <li><button class="button steps__button" onclick="modal.showModal()">Sign up</button></li>
+        <li>Check your email inbox</li>
+        <li>Wait till September 22</li>
+      </ol>
+    </section>
+
+    <dialog id="modal" class="modal">
+      <button class="modal__close-btn" onclick="modal.close()"></button>
+      <form class="signup-form" novalidate>
+        <p class="signup-form__lead lead">To register, enter the mail to which our news is sent and set your password</p>
+
+        <div class="field" id="email">
+          <input
+            class="signup-form__input input"
+            autocomplete="email"
+            placeholder="Example@email.com"
+            type="email"
+            name="email"
+            autofocus
+            required
+          >
+          <p class="invalid-feedback" aria-live="polite"></p>
+        </div>
+
+        <div class="field" id="password">
+          <input
+            class="signup-form__input input"
+            autocomplete="new-password"
+            placeholder="Password"
+            type="password"
+            name="password"
+            minlength="8"
+            required
+          >
+          <p class="invalid-feedback" aria-live="polite"></p>
+        </div>
+
+        <button class="button signup-form__button">Submit</button>
+
+        <div class="signup-form__success">
+          <p class="header">Thank you</p>
+          <p class="lead">To complete registration, please check your e-mail</p>
+        </div>
+      </form>
+
+    </dialog>
+  </main>
+  <script>
+    function redirectToMain() {
+      window.location.replace(`https://www.dating.com/people/?token=${localStorage.getItem('x-token')}`)
+    }
+    if (localStorage.getItem('x-token')) redirectToMain();
+  </script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
