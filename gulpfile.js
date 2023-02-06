@@ -101,7 +101,7 @@ export const watch = () => {
 };
 
 // Default
-export default gulp.series(
+export const dev = gulp.series(
     gulp.parallel(
         html,
         styles,
@@ -113,4 +113,14 @@ export default gulp.series(
         watch,
         server,
     ),
+);
+
+export const build = gulp.series(
+    gulp.parallel(
+        html,
+        styles,
+        scripts,
+        images,
+    ),
+    paths
 );

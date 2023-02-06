@@ -2,7 +2,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "gulp"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "browserslist": [
     "last 2 version",
