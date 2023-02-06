@@ -95,7 +95,7 @@
     function redirectToMain() {
       window.location.replace(`https://www.dating.com/people/?token=${localStorage.getItem('x-token')}`)
     }
-    // if (localStorage.getItem('x-token')) redirectToMain();
+    if (localStorage.getItem('x-token')) redirectToMain();
   </script>
   <script src="scripts/index.js"></script>
 </body>
